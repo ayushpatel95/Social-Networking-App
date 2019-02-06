@@ -1,0 +1,55 @@
+<LinearLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:id="@+id/edit_toolbar"
+        android:minHeight="30dp"
+        android:maxButtonHeight="30dp"
+        android:background="#dadbe4"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="Friends"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_alignBaseline="@id/toolbar_image"
+            android:id="@+id/toolbar_text"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/home"
+            android:id="@+id/toolbar_image"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/toolbar_text"
+
+            />
+    </Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1ecbf2"
+        android:elevation="10dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tab_layout"/>
+
+</LinearLayout>

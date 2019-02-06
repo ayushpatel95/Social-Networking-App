@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <Toolbar
+        android:id="@+id/edit_toolbar"
+        android:minHeight="30dp"
+        android:maxButtonHeight="30dp"
+        android:background="#dadbe4"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_alignBaseline="@id/toolbar_image"
+            android:id="@+id/toolbar_text"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+          android:src="@drawable/friends_list"
+            android:id="@+id/toolbar_image"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/toolbar_text"
+
+            />
+     </Toolbar>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posts"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:id="@+id/rcv"
+        android:layout_height="320dp">
+
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="What is in your mind?"
+            android:id="@+id/posted"
+            android:layout_marginRight="10dp"
+            android:maxLength="200"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:id="@+id/postimage"/>
+
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
